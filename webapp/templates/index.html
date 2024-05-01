@@ -2,6 +2,59 @@
 <html>
 <head>
     <title>Enter your news/info here</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 40px;
+            padding: 20px;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            font-size: 16px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+        .output {
+            background-color: #fff;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+            max-width: 600px;
+            margin: auto;
+        }
+        strong {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <form method="get">
@@ -9,8 +62,10 @@
         <input type="text" id="input_text" name="input_text">
         <button type="submit">Submit</button>
     </form>
-    <div>
+    {% if output_text %}
+    <div class="output">
         <strong>Output:</strong> {{ output_text }}
     </div>
+    {% endif %}
 </body>
 </html>
