@@ -64,7 +64,7 @@
     </form>
     {% if output_text %}
     <div class="output">
-        <strong>Output:</strong> {{ output_text }}
+        <strong>Output:</strong> {{ output_text | safe }}
     </div>
     {% endif %}
 </body>
